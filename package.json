@@ -1,0 +1,26 @@
+{
+  "name": "node.js-twitter",
+  "version": "1.0.0",
+  "description": "A Twitter-like app built in Node.js",
+  "main": "app.js",
+  "scripts": {
+    "start": "PORT=4000 nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MassimoRosas/node.js-twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MassimoRosas/node.js-twitter/issues"
+  },
+  "homepage": "https://github.com/MassimoRosas/node.js-twitter#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.4",
+    "pug": "^3.0.0"
+  }
+}
