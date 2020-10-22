@@ -4,7 +4,7 @@
   "description": "A Twitter-like app built in Node.js",
   "main": "app.js",
   "scripts": {
-    "start": "NODE_ENV=development nodemon app.js",
+    "start": "NODE_ENV=development PORT=4000 nodemon app.js",
     "start:prod": "NODE_ENV=production nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
