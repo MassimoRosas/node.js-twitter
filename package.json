@@ -4,7 +4,8 @@
   "description": "A Twitter-like app built in Node.js",
   "main": "app.js",
   "scripts": {
-    "start": "PORT=4000 nodemon app.js",
+    "start": "NODE_ENV=development nodemon app.js",
+    "start:prod": "NODE_ENV=production nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,6 +19,7 @@
   },
   "homepage": "https://github.com/MassimoRosas/node.js-twitter#readme",
   "dependencies": {
+    "errorhandler": "^1.5.1",
     "express": "^4.17.1",
     "mongoose": "^5.10.9",
     "morgan": "^1.10.0",
