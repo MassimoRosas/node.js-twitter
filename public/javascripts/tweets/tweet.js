@@ -6,7 +6,6 @@ function bindTweet() {
   const elements = document.querySelectorAll('.btn-danger');
   const tweetContainer = document.querySelector('#tweet-list-container');
 
-  console.log(elements);
   elements.forEach( e => {
     e.addEventListener('click', ($event) => {
       const tweetId = $event.target.getAttribute('tweetid');
