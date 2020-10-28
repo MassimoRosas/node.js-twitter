@@ -17,7 +17,7 @@ exports.tweetCreate = async (req, res, next) => {
   try {
     const body = req.body;
     await createTweet({ ...body, author: req.user._id });
-    res.redirect('/');
+    res.redirect('/tweets');
   } catch(e) {
     const errors = Object.keys(e.errors).map( key => e.errors[key].message );
     res.status(400).render('tweets/tweet-form', { errors, isAuthenticated: req.isAuthenticated(), currentUser: req.user });
