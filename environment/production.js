@@ -1,7 +1,5 @@
-const path = require('path');
-
 module.exports = {
   dbUrl: 'mongodb+srv://alex:aze@cluster0.lpnpa.gcp.mongodb.net/twitter?retryWrites=true&w=majority',
-  cert: path.join(__dirname, ''),
-  key: path.join(__dirname, '')
+  cert: '/etc/letsencrypt/live/www.dyma-twitter-project.site/fullchain.pem',
+  key: '/etc/letsencrypt/live/www.dyma-twitter-project.site/privkey.pem'
 }
