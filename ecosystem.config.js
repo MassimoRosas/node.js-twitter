@@ -1,10 +1,8 @@
 module.exports = {
   apps : [{
     name: 'twitter',
-    script: './bin/www',
     instances: 'max',
     autorestart: true,
-    watch: true,
     env: {
       NODE_ENV: 'development'
     },
@@ -12,7 +10,7 @@ module.exports = {
       NODE_ENV: 'production'
     }
   }, {
-    script: './service-worker/',
-    watch: ['./service-worker']
+    script: './bin/www',
+    watch: true,
   }],
 };
