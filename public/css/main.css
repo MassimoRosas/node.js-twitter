@@ -72,3 +72,24 @@ body {
   background: #eee;
   transition: background 0.2s;
 }
+
+.btn-follow {
+  color: #007BFF;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border-width: 2px;
+}
+
+.btn-follow:hover {
+  color: white;
+}
+
+.btn-unfollow {
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-unfollow:hover {
+}
