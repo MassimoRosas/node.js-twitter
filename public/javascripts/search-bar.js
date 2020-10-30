@@ -23,7 +23,7 @@ window.addEventListener('DOMContentLoaded', () => {
     ref = setTimeout(() => {
       axios.get('/users?search=' + value)
            .then( response => {
-             console.log(response);
+             menuContainer.innerHTML = response.data;
            })
            .catch( error => {
              console.log(error);

@@ -1,4 +1,4 @@
-const { createUser, findUserPerUsername } = require('../queries/users.queries');
+const { createUser, findUserPerUsername, searchUsersPerUsername } = require('../queries/users.queries');
 const { getUserTweetsFromAuthorId } = require('../queries/tweets.queries');
 const path = require('path');
 const multer = require('multer');
@@ -10,6 +10,17 @@ const upload = multer({ storage: multer.diskStorage({
     cb(null, `${ Date.now() }-${ file.originalname }`);
   }
 }) });
+
+exports.userList = async (req, res, next) => {
+  try {
+    const search = req.query.search;
+    const users = await searchUsersPerUsername(search);
+    res.render('includes/search-menu', { users });
+
+  } catch(e) {
+    next(e);
+  }
+}
 
 exports.userProfile = async (req, res, next) => {
   try {
